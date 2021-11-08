@@ -1,6 +1,7 @@
 const User = require("./user.js");
 const Muttering = require("./muttering.js");
 
+// TODO use Jest time mocking
 const create_date = new Date();
 
 const muttering = new Muttering(1, new User(1, 'Alice'), 'I love the weather today.', create_date);
