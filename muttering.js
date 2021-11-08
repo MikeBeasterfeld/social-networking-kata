@@ -3,6 +3,6 @@ module.exports = class Muttering {
         this.id = id;
         this.user = user;
         this.content = content;
-        this.create_date = (typeof create_date === 'undefined') ? new Date : create_date;
+        this.create_date = (typeof create_date === 'undefined') ? new Date() : create_date;
     }
 }
