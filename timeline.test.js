@@ -16,3 +16,9 @@ test("Adding mutter to timeline increases total mutters in timeline", () => {
     timeline.add_muttering(new Muttering(3, new User(2, 'Bob'), 'Good game though.'));
     expect(timeline.mutterings.length).toBe(3);
 });
+
+test("Timeline class 'get_by_user_id' returns correct number of records", () => {
+    expect(timeline.get_by_user_id(1).length).toBe(1);
+    expect(timeline.get_by_user_id(2).length).toBe(2);
+});
+
