@@ -9,8 +9,6 @@ module.exports = class Muttering {
     time_since_created(current_time) {
         current_time = (typeof current_time === 'undefined') ? new Date() : current_time;
 
-        console.log(typeof current_time);
-
         // TODO: find super cool library later
         let diff = current_time.getTime() - this.create_date.getTime();
 
