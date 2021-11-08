@@ -14,4 +14,8 @@ module.exports = class Muttering {
 
         return '(' + Math.floor(diff / 60000) + ' minute ago)';
     }
+
+    string_format() {
+        return this.content + ' ' + this.time_since_created();
+    }
 }

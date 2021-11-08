@@ -32,3 +32,8 @@ test("Muttering date 'time since created' output calulated correctly", () => {
     expect(muttering.time_since_created(new Date(create_date.getTime() + 60000))).toBe('(1 minute ago)');
     expect(muttering.time_since_created(new Date(create_date.getTime() + 120000))).toBe('(2 minute ago)');
 });
+
+test("Muttering output with time since created", () => {
+    // potential race codition in testing
+    expect(muttering.string_format()).toBe('I love the weather today. ' + muttering.time_since_created());
+});
